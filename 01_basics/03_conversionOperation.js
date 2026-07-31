@@ -22,5 +22,31 @@ let booleanIsLoggedIn = Boolean(isLoggedIn)
 
 let kapi = "Sakkar"
 let chai = Number(kapi)
-console.log(chai)
-console.log(typeof chai)
+//console.log(chai)
+//console.log(typeof chai)
+
+let value = 5
+let negAbove = -value
+//console.log(negAbove)
+
+
+// console.log(3)
+
+// let str1 = "Ram"
+// let str2 = " Krishna"
+// let str3 = " Hari"
+// let str4 = str1 + str2 + str3
+// console.log(str4)
+// console.log(6 + "0" + 3)
+
+// let points=100
+// points + points++
+// console.log(points)
+
+// let x = 3
+// console.log( x++ + x )
+
+console.log( 2 > 1 )
+console.log( 1 > 2 )
+console.log( "2" > 1)
+console.log( "02" > 1)

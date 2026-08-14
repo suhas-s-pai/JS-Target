@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style = "background-color: #414141; color: aliceblue">
+    <h2>Amazing image</h2>
+
+<div>
+    <ul id="images">
+        <li><img width="200px" id="image1" src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="car"></li>
+
+<li><img width="200px" id="image2" src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="mountain"></li>
+
+<li><img width="200px" id="image3" src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="food"></li>
+
+<li><img width="200px" id="image4" src="https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="dog"></li>
+
+<li><img width="200px" id="image5" src="https://images.pexels.com/photos/2150/sky-space-dark-galaxy.jpg?auto=compress&cs=tinysrgb&w=1600" alt="space"></li>
+        <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    </ul>
+</div>
+</body>
+<script>
+    // document.getElementById('image5').onclick = function(){
+    //     alert("Elephant clicked")
+    // }
+
+    //attachEvent()
+//jQuery - on
+// type, timestamp, defaultPrevented
+// target, toElement, srcElement, currentTarget,
+// clientX, clientY, screenX, screenY
+// altkey, ctrlkey, shiftkey, keyCode
+
+    document.getElementById('images').addEventListener('click', function(e){
+       console.log("Clicked inside the ul");
+    },false)
+
+    document.getElementById('image5').addEventListener('click', function(e){
+       console.log("Clicked Elephant");
+       e.stopPropagation()
+    },false)
+
+    document.getElementById('google').addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation
+         console.log("Google Clicked")
+
+         document.querySelector('#images').addEventListener('click', function(e){
+            console.log(e.target.tagName);
+            if(e.target.tagName === 'IMG'){
+                console.log(e.target.id)
+                let removeIt = e.target.parentNode
+            removeIt.remove()
+
+            }
+
+            
+         })
+    })
+</script>
+</html>
+
